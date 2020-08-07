@@ -1,6 +1,9 @@
 # Social Sentiment Dash Application
 Live-streaming sentiment analysis application created with Python and Dash.
 An integrated search bar is provided to input a word on which you need tweets.
+The sentiments can be seen in the graphs updating in real time.
+A sentiment of 0 indiactes neutrality. The range is from -1 (negative) to 1 (positive).
+A pie chart also provides the ratio of positive to negative tweets.
 
 ![application example](https://pythonprogramming.net/static/images/dash/dashapplication.jpg)
 
