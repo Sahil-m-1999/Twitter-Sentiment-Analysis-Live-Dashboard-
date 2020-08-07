@@ -1,5 +1,6 @@
 # Social Sentiment Dash Application
 Live-streaming sentiment analysis application created with Python and Dash.
+This application is useful for visualising the live twitter tweet sentiment analysis. There is a search bar for inputting the word on which you need tweets.
 
 ![application example](https://pythonprogramming.net/static/images/dash/dashapplication.jpg)
 
@@ -11,4 +12,21 @@ Live-streaming sentiment analysis application created with Python and Dash.
 - `cache.py` -  For caching purposes in effort to get things to run faster. 
 - `db-truncate.py` - A script to truncate the infinitely-growing sqlite database. You will get about 3.5 millionish tweets per day, depending on how fast you can process. You can keep these, but, as the database grows, search times will dramatically suffer. 
 
-## Quick start
+## Steps to run
+
+- Clone repo
+- install `requirements.txt` using `pip install -r requirements.txt`
+- Fill in your Twitter App credentials to `twitter_stream.py`. There are 4 fields to fill. Go to [**apps.twitter.com**](https://apps.twitter.com/) to set that up if you need to.
+- Run `twitter_stream.py` to build database
+- While running the twitter_stream.py there may be some nltk libraries which may not be installed in your system so install those required modules of nltk if an error of nltk pops up.
+- After twitter_stream.py is running succesfully a database will be created in the same directory of the files.
+- If you're using this locally, you can run the application with the `dev_server.py` script.
+- While running this file a flask instance website is generated in the prompt copy the web address and paste it in your browser to observe the complete application.
+- You might need the latest version of sqlite(with fts5 support). 
+```
+sudo add-apt-repository ppa:jonathonf/backports
+sudo apt-get update && sudo apt-get install sqlite3
+```
+- Consider running the `db-truncate.py` from time to time (or via a cronjob), to keep the database reasonably sized. In its current state, the database really doesn't need to store more than 2-3 days of data most likely. 
+
+
