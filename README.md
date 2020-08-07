@@ -1,6 +1,6 @@
 # Social Sentiment Dash Application
 Live-streaming sentiment analysis application created with Python and Dash.
-This application is useful for visualising the live twitter tweet sentiment analysis. There is a search bar for inputting the word on which you need tweets.
+An integrated search bar is provided to input a word on which you need tweets.
 
 ![application example](https://pythonprogramming.net/static/images/dash/dashapplication.jpg)
 
